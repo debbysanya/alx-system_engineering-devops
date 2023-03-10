@@ -1,8 +1,15 @@
-#Learning shell permissions
-- su betty:switches the current user to the user betty
-- whoami: prints the effective username of the current use
-- groups: prints all the groups the current user is part of
-- touch hello: creates an empty file called hello
-- chmod u+x hello: adds execute permission to the owner of the file hello
-- chmod ug+x,o+r: adds execute permission to the owner and the group owner, and read permission to other users, to the file hello
-- chmod ugo+x hello: adds execution permission to the owner, the group owner and the other users, to the file hello
+# Learning shell permissions
+- 0 su betty: switches the current user to the user betty
+- 1 whoami: prints the effective username of the current use
+- 2 groups: prints all the groups the current user is part of
+- 3 chown betty hello: changes the owner of the file hello to the user betty
+- 4 touch hello: creates an empty file called hello
+- 5 chmod u+x hello: adds execute permission to the owner of the file hello
+- 6 chmod ug+x,o+r: adds execute permission to the owner and the group owner, and read permission to other users, to the file hello
+- 7 chmod ugo+x hello: adds execution permission to the owner, the group owner and the other users, to the file hello
+- 8 chmod 007 hello: sets the permission of owner to none, Group to none, and Other to all, to the file hello
+- 9 chmod 753 hello: sets the mode of the file hello to this -rwxr-x-wx
+- 10 chmod --refernce=olleh hello: sets the mode of the file hello the same as olleh’s mode
+- 11 chmod -R +X .: adds execute permission to all subdirectories of the current directory for the owner, the group owner and all other users.
+- 12 mkdir -m 751 my_dir:  creates a directory called my_dir with permissions 751 in the working directory
+- 13 chgrp school hello: changes the group owner to school for the file hello
